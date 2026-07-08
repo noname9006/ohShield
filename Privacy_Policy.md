@@ -1,7 +1,7 @@
 # Privacy Policy — ohShield
 
 **Effective Date:** July 1st, 2026
-**Last Updated:** July 1st, 2026
+**Last Updated:** July 7th, 2026
 
 This Privacy Policy explains how ohShield ("we," "us," or "our") collects, uses, discloses, and protects information when you use our Discord bot, verification dashboard, and related services (collectively, the "Service").
 
@@ -27,8 +27,14 @@ To detect bots, spam, and abuse during the verification process, we may collect:
 - Verification session tokens
 - CAPTCHA or challenge-response results
 
-### c) Information We Do Not Collect
-ohShield does not read, log, or store the content of your Discord messages, direct messages, or voice channel activity. We only process the minimum data necessary to perform verification and security functions.
+### c) Message Content Analysis
+To detect phishing links, fake giveaways, impersonation attempts, and other scam-related content, ohShield scans message content in real-time. This includes:
+- URLs and link analysis
+- Text patterns associated with known scams and phishing
+- Suspicious keywords and phishing indicators
+- Giveaway and impersonation detection signals
+
+**Message content is analyzed in real-time but not permanently stored or logged** except where flagged as potential threats (see Data Retention section below).
 
 ### d) Cookies (Dashboard)
 If you use our web dashboard, we may use cookies or similar technologies to maintain your session and preferences. You can control cookie behavior through your browser settings, though disabling cookies may affect dashboard functionality.
@@ -37,13 +43,13 @@ If you use our web dashboard, we may use cookies or similar technologies to main
 
 We use collected information to:
 - Verify that server members are legitimate, human users
-- Detect and prevent scam accounts, phishing attempts, and impersonation
+- Scan message content in real-time to detect and prevent scam accounts, phishing attempts, impersonation, and malicious links
 - Assign or remove verification-related roles
 - Maintain and improve the security and reliability of the Service
 - Respond to support requests and troubleshoot issues
 - Comply with legal obligations
 
-We do **not** sell your personal information to third parties.
+We do **not** sell your personal information to third parties. Message content analyzed for security purposes is not stored long-term except where flagged as a potential threat for moderator review.
 
 ## 3. Legal Basis for Processing (GDPR)
 
@@ -81,7 +87,7 @@ Depending on your jurisdiction, you may have the right to:
 - Request a copy of your data in a portable format
 - Withdraw consent, where processing is based on consent
 
-To exercise these rights, contact us at the email below. We will respond within 30 days.
+To exercise these rights, contact us at the email below. We will respond within the timeframe required by applicable law (e.g., 30 days under GDPR).
 
 California residents may have additional rights under the CCPA/CPRA, including the right to know what personal information is collected and the right to opt out of the sale of personal information. **We do not sell personal information.**
 
@@ -102,3 +108,7 @@ We may update this Privacy Policy from time to time to reflect changes in our pr
 If you have questions, concerns, or requests regarding this Privacy Policy or your data, please contact us at:
 
 **Email:** noname9006@gmail.com
+
+---
+
+*By using ohShield, you acknowledge that you have read and understood this Privacy Policy.*
