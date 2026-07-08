@@ -14,18 +14,18 @@ By using ohShield, you agree to the collection and use of information as describ
 ### a) Information from Discord
 When ohShield is added to a server or a user interacts with it, we may collect:
 - Discord User ID
-- Username and discriminator/tag
-- Avatar URL
+- Username
 - Server (Guild) ID and server name
 - Server roles relevant to verification status
 - Timestamps of verification attempts and outcomes
+- Game scores, for servers using the optional game-based verification mode
 
 ### b) Technical & Verification Data
-To detect bots, spam, and abuse during the verification process, we may collect:
-- IP address (during dashboard-based verification)
-- Browser type and device information
-- Verification session tokens
-- CAPTCHA or challenge-response results
+To operate the verification process, we may collect:
+- A signed session cookie/token, used to keep you logged in to the verification page during a single verification attempt
+- CAPTCHA, emoji-challenge, or math-challenge pass/fail results and attempt counts (used to enforce per-user attempt limits and cooldowns)
+
+We do not collect your IP address, browser type, device information, or avatar image.
 
 ### c) Message Content Analysis
 To detect phishing links, fake giveaways, impersonation attempts, and other scam-related content, ohShield scans message content in real-time. This includes:
@@ -34,7 +34,7 @@ To detect phishing links, fake giveaways, impersonation attempts, and other scam
 - Suspicious keywords and phishing indicators
 - Giveaway and impersonation detection signals
 
-**Message content is analyzed in real-time but not permanently stored or logged** except where flagged as potential threats (see Data Retention section below).
+**Message content is analyzed in real-time and is not stored** unless a message is reported as a scam (via the `!scam` command) or matches our automated scam-detection rules, in which case the message text is stored so moderators can review it and take action (see Data Retention section below).
 
 ### d) Cookies (Dashboard)
 If you use our web dashboard, we may use cookies or similar technologies to maintain your session and preferences. You can control cookie behavior through your browser settings, though disabling cookies may affect dashboard functionality.
@@ -70,8 +70,8 @@ We do not share verification data with server owners beyond the verification sta
 ## 5. Data Retention
 
 We retain data only as long as necessary to fulfill the purposes described in this policy:
-- Verification records are retained for as long as the bot remains in the server.
-- If ohShield is removed from a server, associated server-specific data is deleted within 90 days, except where retention is required for legal or security purposes.
+- Verification records, game scores, and stored scam-report message text are retained for as long as the bot remains in the server.
+- If ohShield is removed from a server, associated server-specific data is retained until the server owner or an authorized admin requests its deletion by contacting us (see Section 11), except where retention is required for legal or security purposes. We do not currently run an automatic deletion schedule after removal — deletion is handled on request.
 
 ## 6. Data Security
 
