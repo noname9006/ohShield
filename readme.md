@@ -36,17 +36,6 @@ All security actions (bans, timeouts, message deletions) are logged with timesta
 
 ohShield stands out from other Discord security bots with these **killing features**:
 
-### Decentralized Structure
-
-Unlike centralized bots, ohShield doesn't rely on a central server to detect threats. All detection happens locally on your server. Built-in Global Rules are the same across all servers, but configuration is per-server.
-
-Benefits:
-1. Privacy — Your server data never leaves your infrastructure
-2. Reliability — No outages or service interruptions from a central system
-3. Speed — Instant detection without network latency
-4. Control — Full control over your moderation rules and decisions
-5. Consistency — Global Rules use the same threat patterns everywhere, tuned for low false positives
-
 ### Global Rules, Local Enforcement
 
 ohShield learns from the global community while respecting your server's unique needs.
