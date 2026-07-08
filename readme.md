@@ -712,12 +712,6 @@ ohShield stores:
 - **Scheduled cleanup tasks** (for automatic image deletion)
 - **Verification state** (who passed verification, challenge attempts)
 
-All data is stored locally by whoever hosts the bot. **ohShield does not send any data to external servers** — your server's security decisions stay completely on your server. This is the decentralized advantage.
-
-### Can I export or backup my settings?
-
-Ask your bot host — settings live in the bot's local database, so backup/export is a hosting-level task. See the [Running Guide](RUNNING_GUIDE.md#faq) for the exact steps.
-
 ### What happens if ohShield goes offline?
 
 - **Active timers:** Discord handles timeout timers, so they continue even if the bot is offline
@@ -766,13 +760,6 @@ ohShield will warn you if it's missing critical permissions.
 - Bans, timeouts, and deletions are skipped (disabled)
 
 Perfect for verifying your configuration before going live. Ask your bot host to enable it — see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
-
-### How do I report bugs or request features?
-
-Go to the [ohShield GitHub repository](https://github.com/noname9006/ohShield) and:
-- **Report bugs:** Open an Issue with reproduction steps
-- **Request features:** Open an Issue with your use case
-- **Contribute:** Fork the repo, make changes, and open a Pull Request
 
 ---
 
