@@ -2,8 +2,6 @@
 
 **ohShield** is a Discord security bot designed to protect your server from spam, scams, and suspicious activity with unmatched accuracy. This guide covers everything a server admin or moderator needs to configure and use ohShield day-to-day.
 
-Looking to install, host, or extend the bot itself? See the [Running Guide](RUNNING_GUIDE.md).
-
 ---
 
 ## Contents
