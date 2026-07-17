@@ -81,7 +81,7 @@ These Terms shall be governed by and construed in accordance with the laws of Ge
 
 If you have questions about these Terms, please contact us at:
 
-**Email:** noname9006@gmail.com
+**Email:** yes@ohshield.com
 
 ---
 
