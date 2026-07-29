@@ -1,6 +1,6 @@
 # ohShield - User Guide
 
-**ohShield** is a Discord security bot that protects your server from spam, scams, and impersonation вЂ” with a shared rule set you never have to write, and that is tested against real conversation before it reaches you. This guide covers everything a server admin or moderator needs to configure and use ohShield day-to-day.
+**ohShield** is a Discord security bot that protects your server from spam, scams, and impersonation — with a shared rule set you never have to write, and that is tested against real conversation before it reaches you. This guide covers everything a server admin or moderator needs to configure and use ohShield day-to-day.
 
 ---
 
@@ -21,11 +21,11 @@
 
 **ohShield** is a Discord bot that helps server moderators detect and respond to security threats automatically. A guided onboarding wizard walks you through setup the moment it joins your server. It monitors for:
 
-1. Scams, impersonation, and obfuscated links вЂ” A shared, always-on rule set maintained across every protected server, so you never write a filter yourself
-2. Image drops вЂ” Several images posted with no accompanying text, a common way to smuggle a scam past keyword filters
-3. Reported scams вЂ” Lets trusted users report suspicious messages, with moderators reviewing and taking action
-4. Discord AutoMod activity вЂ” Tracks and logs what your AutoMod catches, giving you centralized visibility
-5. User verification вЂ” Optional verification challenges (emoji, captcha, or 2048 game) for new members
+1. Scams, impersonation, and obfuscated links — A shared, always-on rule set maintained across every protected server, so you never write a filter yourself
+2. Image drops — Several images posted with no accompanying text, a common way to smuggle a scam past keyword filters
+3. Reported scams — Lets trusted users report suspicious messages, with moderators reviewing and taking action
+4. Discord AutoMod activity — Tracks and logs what your AutoMod catches, giving you centralized visibility
+5. User verification — Optional verification challenges (emoji, captcha, or 2048 game) for new members
 
 All security actions (bans, timeouts, message deletions) are logged with timestamps and moderator information. ohShield can be configured on a per-server basis without affecting other servers.
 
@@ -40,14 +40,14 @@ Three things separate ohShield from other Discord security bots.
 You don't write scam filters.
 
 Discord's native AutoMod and most security bots support custom keyword and regex
-rules вЂ” which means every admin is independently responsible for discovering,
+rules — which means every admin is independently responsible for discovering,
 writing, and maintaining scam patterns while scammers rotate theirs weekly. Most
 admins have a community to run and no interest in becoming a part-time threat
 analyst.
 
 ohShield ships a rule set that is already written and kept current:
 
-1. Global Rules are enabled by default вЂ” protection starts the moment the bot joins
+1. Global Rules are enabled by default — protection starts the moment the bot joins
 2. Detection covers homoglyph impersonation, obfuscated links, recruitment spam, and mention abuse
 3. New patterns arrive automatically, with no restart and nothing for you to update
 4. You can still disable Global Rules or tune the timeout per server
@@ -58,7 +58,7 @@ A scam confirmed in one community becomes a candidate rule for all of them.
 
 1. Trusted members report scams with `!scam`; a moderator's action is what confirms it
 2. Confirmed scams feed the shared rule set rather than sitting in one server's logs
-3. The rule set grows with the network вЂ” it isn't a static list frozen at install time
+3. The rule set grows with the network — it isn't a static list frozen at install time
 4. Your server benefits from attacks it has never seen
 
 ### 3. Tested before it ships
@@ -66,9 +66,9 @@ A scam confirmed in one community becomes a candidate rule for all of them.
 Because Global Rules deploy to every server at once, a careless rule would be a
 mistake everywhere. So every rule is measured before it goes live:
 
-1. Backtested against confirmed scams вЂ” does it catch anything real?
-2. Backtested against known-good conversation вЂ” does it break normal servers?
-3. Any match against text a moderator flagged as a false positive **rejects the rule outright** вЂ” there is no override
+1. Backtested against confirmed scams — does it catch anything real?
+2. Backtested against known-good conversation — does it break normal servers?
+3. Any match against text a moderator flagged as a false positive **rejects the rule outright** — there is no override
 4. Past false positives become permanent regression tests, so the same mistake cannot ship twice
 
 This is measured, not asserted. See
@@ -88,7 +88,7 @@ rejection criteria, and an honest account of what it does *not* promise.
 
 ### Onboarding Wizard
 
-The moment ohShield joins your server, a guided setup flow starts automatically вЂ” no command needed. It checks which channels and role hierarchy positions the bot has, sets up a private setup category, and walks you through scam-report roles, recurring reminders, and moderator visibility, with an add-on menu at the end for report action roles and User Verification.
+The moment ohShield joins your server, a guided setup flow starts automatically — no command needed. It checks which channels and role hierarchy positions the bot has, sets up a private setup category, and walks you through scam-report roles, recurring reminders, and moderator visibility, with an add-on menu at the end for report action roles and User Verification.
 
 Re-run it any time with `%start`/`/start` (Administrator only) to revisit or change any of those settings. See [Onboarding Wizard](#onboarding-wizard-1) for the full step-by-step walkthrough.
 
@@ -96,20 +96,20 @@ Re-run it any time with `%start`/`/start` (Administrator only) to revisit or cha
 
 Always-on cross-server threat detection for:
 
-1. Username impersonation вЂ” Detects suspicious display names attempting to impersonate staff or well-known users
-2. Scam links вЂ” Identifies known phishing URLs and scam domains
-3. Fake job postings вЂ” Detects recruitment spam patterns (3+ fake roles in one message)
-4. Mention abuse вЂ” Catches unauthorized @everyone/@here mentions from users without permission
+1. Username impersonation — Detects suspicious display names attempting to impersonate staff or well-known users
+2. Scam links — Identifies known phishing URLs and scam domains
+3. Fake job postings — Detects recruitment spam patterns (3+ fake roles in one message)
+4. Mention abuse — Catches unauthorized @everyone/@here mentions from users without permission
 
 When triggered: Message is deleted, user is timed out, and alert is logged. Enable per-server with customizable timeout duration.
 
 ### Image Drop Detection
 
-Catches a specific, common scam shape: several images posted with **no accompanying text**. Scammers use it because the payload lives inside the image, where keyword filters and AutoMod cannot read it вЂ” while a real member posting screenshots almost always says something alongside them.
+Catches a specific, common scam shape: several images posted with **no accompanying text**. Scammers use it because the payload lives inside the image, where keyword filters and AutoMod cannot read it — while a real member posting screenshots almost always says something alongside them.
 
 Set a threshold for an exact image count or a "greater than" trigger, then choose the timeout duration.
 
-**How it works:** the trigger is the *number of images on a message with no text* вЂ” the images themselves are not opened, downloaded for analysis, or scanned for content. It is a behavioural signal, not image recognition. Tune the threshold to your server: communities that share art or screenshots in bulk should set it higher, or exclude trusted roles.
+**How it works:** the trigger is the *number of images on a message with no text* — the images themselves are not opened, downloaded for analysis, or scanned for content. It is a behavioural signal, not image recognition. Tune the threshold to your server: communities that share art or screenshots in bulk should set it higher, or exclude trusted roles.
 
 Typically catches:
 1. Uncaptioned bursts of fake giveaway or "support" screenshots
@@ -125,9 +125,9 @@ Trusted users reply to any message with `!scam` or `%scam` to flag it as a scam,
 - Delete messages from the last 24 hours
 - Mark as reviewed
 
-If the reporter has `Ban Members` permission, the user is banned immediately; if not (and not banned), a `Moderate Members` reporter gets an immediate timeout instead. Kick is never auto-applied on report вЂ” it's moderator-clicked only, from the alert's button. Works on content that AutoMod and keyword filters completely miss.
+If the reporter has `Ban Members` permission, the user is banned immediately; if not (and not banned), a `Moderate Members` reporter gets an immediate timeout instead. Kick is never auto-applied on report — it's moderator-clicked only, from the alert's button. Works on content that AutoMod and keyword filters completely miss.
 
-**Rate limiting:** reports are capped by a per-guild cooldown, a per-user cooldown, and a per-user hourly limit (all configurable, see [Scam Report Limits & Roles](#5-scam-report-limits--roles)) вЂ” trusted roles can be made immune to all three.
+**Rate limiting:** reports are capped by a per-guild cooldown, a per-user cooldown, and a per-user hourly limit (all configurable, see [Scam Report Limits & Roles](#5-scam-report-limits--roles)) — trusted roles can be made immune to all three.
 
 **Action roles:** beyond the native Discord permissions above, admins can grant specific roles the ability to delete, timeout, kick, or ban *via reports only*, without handing out the underlying Discord permission server-wide.
 
@@ -146,7 +146,7 @@ Command `%check [duration]` or `/check` (admin only) runs a full channel-history
 
 ### Channel Access Overview
 
-Command `%checkchannels` or `/checkchannels` (admin only) lists every channel, category, and thread ohShield can see, in the same order they appear in your server, with a вњ…/вќЊ badge per channel for Read History / Send Messages / Manage Messages. Use it to spot channels where the bot is missing the permissions it needs to protect them.
+Command `%checkchannels` or `/checkchannels` (admin only) lists every channel, category, and thread ohShield can see, in the same order they appear in your server, with a ✅/❌ badge per channel for Read History / Send Messages / Manage Messages. Use it to spot channels where the bot is missing the permissions it needs to protect them.
 
 ### Role Hierarchy Check
 
@@ -154,10 +154,10 @@ Command `%checkroles` or `/checkroles` (admin only) shows ohShield's rank in you
 
 ### Security Reminder (Recurring Notifications)
 
-Optional recurring security tip posted to one or more channels at configurable intervals. Helps keep your community aware of security best practices. Any number of channels can be added вЂ” each runs its own independent schedule.
+Optional recurring security tip posted to one or more channels at configurable intervals. Helps keep your community aware of security best practices. Any number of channels can be added — each runs its own independent schedule.
 
 Configure:
-1. Channel(s) where reminders are posted вЂ” add as many as you like, and disable one at a time or all at once
+1. Channel(s) where reminders are posted — add as many as you like, and disable one at a time or all at once
 2. Check interval (how often to evaluate whether to post, default 120 minutes)
 3. Minimum messages threshold (post only after this many user messages since last reminder, default 10)
 
@@ -165,52 +165,52 @@ Configure:
 
 Optional verification challenges for new members. Enable any combination of:
 
-1. Emoji вЂ” Select the correct emoji from a grid (configure: number of rounds)
-2. CAPTCHA вЂ” Identify distorted text in an image (configure: number of tasks)
-3. Game2048 вЂ” Play and win at the 2048 game (configure: target score)
+1. Emoji — Select the correct emoji from a grid (configure: number of rounds)
+2. CAPTCHA — Identify distorted text in an image (configure: number of tasks)
+3. Game2048 — Play and win at the 2048 game (configure: target score)
 
 Each mode requires a verified role that's granted on successful completion. Optionally, log verification outcomes to a channel, lock out members after too many failed attempts, or auto-kick members who never verify.
 
 ### Image Storage (Optional)
 
-When enabled, ohShield re-uploads flagged images to a private channel before taking action. This preserves evidence even after the original message is deleted. Set a retention period (default: 24 hours) and images auto-delete after that time. This is configured by whoever hosts the bot вЂ” see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
+When enabled, ohShield re-uploads flagged images to a private channel before taking action. This preserves evidence even after the original message is deleted. Set a retention period (default: 24 hours) and images auto-delete after that time. This is configured by whoever hosts the bot — see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
 
 ### Telegram Alerts (Optional)
 
-Link one or more Telegram chats (a moderator's PM or a group) to receive the same security alerts posted to your Discord log/scam-alert/AutoMod channels вЂ” useful if your moderators check Telegram more often than Discord. Requires the bot host to set `TELEGRAM_BOT_TOKEN` вЂ” see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
+Link one or more Telegram chats (a moderator's PM or a group) to receive the same security alerts posted to your Discord log/scam-alert/AutoMod channels — useful if your moderators check Telegram more often than Discord. Requires the bot host to set `TELEGRAM_BOT_TOKEN` — see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
 
 ### Editor Roles
 
-By default, only Administrators can change ohShield's settings. `%seteditorroles` lets an Administrator grant that same access to specific roles, without handing out full Administrator вЂ” useful for trusted moderators. Editor-role members can also use the Security Dashboard (below) for any server they can edit.
+By default, only Administrators can change ohShield's settings. `%seteditorroles` lets an Administrator grant that same access to specific roles, without handing out full Administrator — useful for trusted moderators. Editor-role members can also use the Security Dashboard (below) for any server they can edit.
 
 ### Security Dashboard (Optional)
 
-An optional web dashboard for a per-server security overview, activity log, rules status, and more вЂ” log in with Discord to see every server you're an Administrator or editor-role holder in. Disabled by default; enabled and configured by whoever hosts the bot вЂ” see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
+An optional web dashboard for a per-server security overview, activity log, rules status, and more — log in with Discord to see every server you're an Administrator or editor-role holder in. Disabled by default; enabled and configured by whoever hosts the bot — see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
 
 ### Test Mode
 
-Run ohShield without executing real moderation actions. Detection, alerts, and logging all work normally вЂ” only bans, timeouts, and deletions are skipped. Perfect for testing your configuration before going live. Toggled by whoever hosts the bot вЂ” see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
+Run ohShield without executing real moderation actions. Detection, alerts, and logging all work normally — only bans, timeouts, and deletions are skipped. Perfect for testing your configuration before going live. Toggled by whoever hosts the bot — see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
 
 ---
 
 ## Onboarding Wizard
 
-When ohShield first joins your server, it automatically launches a guided setup flow вЂ” no command needed. An Administrator can also launch or resume it any time with `%start` or `/start`.
+When ohShield first joins your server, it automatically launches a guided setup flow — no command needed. An Administrator can also launch or resume it any time with `%start` or `/start`.
 
 **What it walks through, in order:**
 
-1. **Greeting** вЂ” confirms Global Rules and community reports are already protecting your server.
-2. **Channel access check** вЂ” shows how many channels the bot can fully read/send/manage in, with a one-click **Fix permissions** button per category of channels that's missing access.
-3. **Role hierarchy check** вЂ” shows ohShield's rank in your role list and which roles (if any) sit above it and can't be moderated.
-4. **Scam report roles** вЂ” pick which roles can use `!scam`/`%scam` to report a message.
-5. **Recurring reminders** вЂ” optionally pick one or more channels for the Security Reminder (skippable).
-6. **Moderator visibility** вЂ” pick which roles can see the alerts channel created for you.
-7. **Moderator capabilities** вЂ” a read-only summary of what those roles can already do (ban/kick/timeout/delete) based on their native Discord permissions.
-8. **Done** вЂ” an **"Oh, there's more"** button opens an add-on menu for two optional deeper setups: **Report action roles** and **User Verification**.
+1. **Greeting** — confirms Global Rules and community reports are already protecting your server.
+2. **Channel access check** — shows how many channels the bot can fully read/send/manage in, with a one-click **Fix permissions** button per category of channels that's missing access.
+3. **Role hierarchy check** — shows ohShield's rank in your role list and which roles (if any) sit above it and can't be moderated.
+4. **Scam report roles** — pick which roles can use `!scam`/`%scam` to report a message.
+5. **Recurring reminders** — optionally pick one or more channels for the Security Reminder (skippable).
+6. **Moderator visibility** — pick which roles can see the alerts channel created for you.
+7. **Moderator capabilities** — a read-only summary of what those roles can already do (ban/kick/timeout/delete) based on their native Discord permissions.
+8. **Done** — an **"Oh, there's more"** button opens an add-on menu for two optional deeper setups: **Report action roles** and **User Verification**.
 
 Every step has a **Overview** button to jump to any other step, and a **Back** button to return to the previous one. The first run creates a private `// ohShield` category (hidden from `@everyone`) with a command channel and an alerts/reports channel.
 
-If you run `%start`/`/start` after setup is already complete, ohShield tells you setup was already completed and offers a **Run it again** button вЂ” it won't repeat the wizard from scratch unless you confirm.
+If you run `%start`/`/start` after setup is already complete, ohShield tells you setup was already completed and offers a **Run it again** button — it won't repeat the wizard from scratch unless you confirm.
 
 ---
 
@@ -224,7 +224,7 @@ All configuration is done via simple bot commands. The default command prefix is
 %oh
 ```
 
-Displays a summary of all configured settings for your server in a formatted embed. This is your control panel вЂ” check it after making changes to verify they took effect.
+Displays a summary of all configured settings for your server in a formatted embed. This is your control panel — check it after making changes to verify they took effect.
 
 ### Quick Start (5 Minutes)
 
@@ -341,7 +341,7 @@ Administrators are always immune, even with no roles configured.
 %setreport moderatorrole @role-name
 ```
 
-Each accepts `remove` the same way, e.g. `%setreport banrole remove @role-name`. A role with `banrole` can immediately ban a reported user (if they file the report) and can click Ban/Delete & Ban on any alert; `timeoutrole` and `deleterole` work the same way for the Timeout and Delete actions. `kickrole` can click Kick on any alert вЂ” kicking is never auto-applied on report, only moderator-clicked, and isn't reversible via a button once done. `moderatorrole` is a shortcut for both delete and ban/revoke ban at once вЂ” a role added here can click Delete Msg, Ban, and Revoke Ban on any alert without needing separate `deleterole`/`banrole` grants (it does not include timeout or kick).
+Each accepts `remove` the same way, e.g. `%setreport banrole remove @role-name`. A role with `banrole` can immediately ban a reported user (if they file the report) and can click Ban/Delete & Ban on any alert; `timeoutrole` and `deleterole` work the same way for the Timeout and Delete actions. `kickrole` can click Kick on any alert — kicking is never auto-applied on report, only moderator-clicked, and isn't reversible via a button once done. `moderatorrole` is a shortcut for both delete and ban/revoke ban at once — a role added here can click Delete Msg, Ban, and Revoke Ban on any alert without needing separate `deleterole`/`banrole` grants (it does not include timeout or kick).
 
 **Timeout action duration:**
 ```
@@ -351,9 +351,9 @@ Each accepts `remove` the same way, e.g. `%setreport banrole remove @role-name`.
 Sets how long the Timeout report action (auto-applied, or via the alert's Timeout button) times a user out for. Supports the same `30m`/`2h`/`1d` format as Image Drop Detection and Global Rules timeouts (default: 1 hour, max: 28 days).
 
 **Configuration Checklist:**
-- [ ] (Optional) `%setreport guildcooldown|usercooldown|hourlylimit` вЂ” adjust rate limits from the defaults
-- [ ] (Optional) `%setreport immune @role` вЂ” exempt trusted roles from rate limits
-- [ ] (Optional) `%setreport deleterole|timeoutrole|kickrole|banrole|moderatorrole @role` вЂ” let non-admin roles moderate via reports
+- [ ] (Optional) `%setreport guildcooldown|usercooldown|hourlylimit` — adjust rate limits from the defaults
+- [ ] (Optional) `%setreport immune @role` — exempt trusted roles from rate limits
+- [ ] (Optional) `%setreport deleterole|timeoutrole|kickrole|banrole|moderatorrole @role` — let non-admin roles moderate via reports
 
 ### 6. Image Drop Detection Configuration
 
@@ -427,7 +427,7 @@ Shows current status and usage. Configure:
 %globalrules timeout <duration>
 ```
 
-**What it does:** Enable or disable global rules, and set the timeout duration for detected violations (default 1 hour). The detection rules themselves are managed centrally across every server (not per-server configurable) вЂ” only Administrators can toggle Global Rules on/off or change the timeout; this can't be delegated to other roles.
+**What it does:** Enable or disable global rules, and set the timeout duration for detected violations (default 1 hour). The detection rules themselves are managed centrally across every server (not per-server configurable) — only Administrators can toggle Global Rules on/off or change the timeout; this can't be delegated to other roles.
 
 **Example:**
 ```
@@ -436,9 +436,9 @@ Shows current status and usage. Configure:
 ```
 
 **Configuration Checklist:**
-- [ ] `%globalrules on` вЂ” Enable the feature
-- [ ] (Optional) `%globalrules timeout <duration>` вЂ” Set timeout (e.g., `1h`, `30m`)
-- [ ] `%set log #channel` вЂ” Configure the log channel
+- [ ] `%globalrules on` — Enable the feature
+- [ ] (Optional) `%globalrules timeout <duration>` — Set timeout (e.g., `1h`, `30m`)
+- [ ] `%set log #channel` — Configure the log channel
 
 ### 8. Security Reminder Configuration
 
@@ -446,7 +446,7 @@ Shows current status and usage. Configure:
 %setnotify on #channel
 ```
 
-**What it does:** Adds a channel to the recurring Security Reminder rotation. Run this again with a different channel to add more вЂ” any number of channels can be active at once, each running its own independent schedule.
+**What it does:** Adds a channel to the recurring Security Reminder rotation. Run this again with a different channel to add more — any number of channels can be active at once, each running its own independent schedule.
 
 Additional options:
 
@@ -457,7 +457,7 @@ Additional options:
 %setnotify minmessages <count>
 ```
 
-`%setnotify off #channel` disables reminders for just that one channel; `%setnotify off` with no channel disables every channel at once. `interval`/`minmessages` configure how often to check whether to post (default 120 minutes) and how many user messages must occur before reposting (default 10) вЂ” these apply globally, not per channel.
+`%setnotify off #channel` disables reminders for just that one channel; `%setnotify off` with no channel disables every channel at once. `interval`/`minmessages` configure how often to check whether to post (default 120 minutes) and how many user messages must occur before reposting (default 10) — these apply globally, not per channel.
 
 **Example:**
 ```
@@ -469,9 +469,9 @@ Additional options:
 ```
 
 **Configuration Checklist:**
-- [ ] `%setnotify on #channel` вЂ” Enable and add a notification channel (repeat for more than one)
-- [ ] (Optional) `%setnotify interval <minutes>` вЂ” Adjust check frequency
-- [ ] (Optional) `%setnotify minmessages <count>` вЂ” Adjust posting threshold
+- [ ] `%setnotify on #channel` — Enable and add a notification channel (repeat for more than one)
+- [ ] (Optional) `%setnotify interval <minutes>` — Adjust check frequency
+- [ ] (Optional) `%setnotify minmessages <count>` — Adjust posting threshold
 
 ### 9. Verification Configuration
 
@@ -509,9 +509,9 @@ Enable/disable modes (multiple modes can be active at once) and configure settin
 ```
 
 Available modes (enable any combination):
-- `emoji` вЂ” Select correct emoji from grid (requires rounds parameter)
-- `captcha` вЂ” Identify distorted text (requires tasks parameter)
-- `game2048` вЂ” Play 2048 game (requires threshold parameter)
+- `emoji` — Select correct emoji from grid (requires rounds parameter)
+- `captcha` — Identify distorted text (requires tasks parameter)
+- `game2048` — Play 2048 game (requires threshold parameter)
 
 Use `%setverify off` to disable all modes at once, or `%setverify disable <mode>` to turn off just one.
 
@@ -578,17 +578,17 @@ Use `%setverify off` to disable all modes at once, or `%setverify disable <mode>
 3. In test mode, the timeout is skipped, but detection and logging still happen
 
 **Configuration Checklist:**
-- [ ] `%set log #channel` вЂ” Configure the log channel
-- [ ] `%set image threshold <n>` вЂ” Set threshold (e.g., `>2` for 3+ images)
-- [ ] `%set image timeout <duration>` вЂ” Set timeout (e.g., `1h`)
-- [ ] (Optional) `%set image excluderole @role` вЂ” Exclude trusted roles
+- [ ] `%set log #channel` — Configure the log channel
+- [ ] `%set image threshold <n>` — Set threshold (e.g., `>2` for 3+ images)
+- [ ] `%set image timeout <duration>` — Set timeout (e.g., `1h`)
+- [ ] (Optional) `%set image excluderole @role` — Exclude trusted roles
 
 ### Scam Reporting
 
 **Trigger:**
 1. A user replies to any message with `!scam` or `%scam`
 2. (Optional) If a role whitelist is configured, the user must have one of those roles
-3. The report must pass the rate limits in `%setreport` (per-user cooldown, per-user hourly limit, per-guild cooldown) вЂ” skipped entirely for immune roles/Administrators
+3. The report must pass the rate limits in `%setreport` (per-user cooldown, per-user hourly limit, per-guild cooldown) — skipped entirely for immune roles/Administrators
 4. If the reporter has `Ban Members` permission (or a `%setreport banrole`), the user is banned immediately
 5. Otherwise, if the reporter has `Moderate Members` permission (or a `%setreport timeoutrole`), the user is timed out immediately
 
@@ -598,16 +598,16 @@ Use `%setverify off` to disable all modes at once, or `%setverify disable <mode>
    - Reporter name
    - User who sent the scam message
    - Action buttons: Delete, Delete & Ban, Ban, Revoke Ban, Timeout, Remove Timeout, Kick, Delete recent messages
-2. Moderators click buttons to take action вЂ” each gated by the equivalent native Discord permission or a role granted via `%setreport deleterole|timeoutrole|kickrole|banrole|moderatorrole`
+2. Moderators click buttons to take action — each gated by the equivalent native Discord permission or a role granted via `%setreport deleterole|timeoutrole|kickrole|banrole|moderatorrole`
 3. All actions are logged with moderator name and timestamp
 4. In test mode, bans, timeouts, and deletions are skipped, but alerts still post
 
 **Configuration Checklist:**
-- [ ] `%set log #channel` вЂ” Configure the log channel
-- [ ] `%set scam #channel` вЂ” Configure the scam report channel
-- [ ] (Optional) `%set scam @role` вЂ” Whitelist roles (leave empty to allow all users)
-- [ ] (Optional) `%setreport guildcooldown|usercooldown|hourlylimit` вЂ” Adjust rate limits from the defaults
-- [ ] (Optional) `%setreport deleterole|timeoutrole|kickrole|banrole|moderatorrole @role` вЂ” Let non-admin roles moderate via reports
+- [ ] `%set log #channel` — Configure the log channel
+- [ ] `%set scam #channel` — Configure the scam report channel
+- [ ] (Optional) `%set scam @role` — Whitelist roles (leave empty to allow all users)
+- [ ] (Optional) `%setreport guildcooldown|usercooldown|hourlylimit` — Adjust rate limits from the defaults
+- [ ] (Optional) `%setreport deleterole|timeoutrole|kickrole|banrole|moderatorrole @role` — Let non-admin roles moderate via reports
 
 ### AutoMod Integration
 
@@ -626,8 +626,8 @@ Use `%setverify off` to disable all modes at once, or `%setverify disable <mode>
 **Configuration Checklist:**
 - [ ] Enable AutoMod in Discord's Safety Center
 - [ ] Create a channel for AutoMod notifications
-- [ ] `%set automod #channel` вЂ” Tell Shield where AutoMod posts
-- [ ] `%set log #channel` вЂ” Configure the log channel for forwarded alerts
+- [ ] `%set automod #channel` — Tell Shield where AutoMod posts
+- [ ] `%set log #channel` — Configure the log channel for forwarded alerts
 
 ### Global Rules
 
@@ -641,12 +641,12 @@ When a user posts a message or changes their display name/nickname that matches:
 **Action:**
 1. Message is deleted
 2. User is timed out for the configured duration
-3. Alert is logged to the log channel with details of what was matched, with **Ignore** and **Report False Positive** buttons for moderators вЂ” the latter forwards the detection to the bot operator for accuracy review if [Owner Alerts](README.md#owner-alerts) is configured
+3. Alert is logged to the log channel with details of what was matched, with **Ignore** and **Report False Positive** buttons for moderators — the latter forwards the detection to the bot operator for accuracy review if [Owner Alerts](README.md#owner-alerts) is configured
 
 **Configuration Checklist:**
-- [ ] `%globalrules on` вЂ” Enable the feature
-- [ ] (Optional) `%globalrules timeout <duration>` вЂ” Set timeout (e.g., `1h`)
-- [ ] `%set log #channel` вЂ” Configure the log channel
+- [ ] `%globalrules on` — Enable the feature
+- [ ] (Optional) `%globalrules timeout <duration>` — Set timeout (e.g., `1h`)
+- [ ] `%set log #channel` — Configure the log channel
 
 ### Full History Check
 
@@ -659,41 +659,41 @@ The `%check [duration]` (or `/check`) command runs a full channel-history scan a
 
 **How it works:**
 1. Admin runs `%check` (uses the full allowed window) or `%check 7d` / `2h` / `30m` for a shorter one
-2. `/check`'s reply is ephemeral (visible only to you); `%check`'s reply is posted normally, since Discord has no ephemeral concept for text commands вЂ” either way it explains the scan depends on ohShield's actual channel access (see [Channel Access Overview](#channel-access-overview) / [Role Hierarchy Check](#role-hierarchy-check)) and that it can take a while
+2. `/check`'s reply is ephemeral (visible only to you); `%check`'s reply is posted normally, since Discord has no ephemeral concept for text commands — either way it explains the scan depends on ohShield's actual channel access (see [Channel Access Overview](#channel-access-overview) / [Role Hierarchy Check](#role-hierarchy-check)) and that it can take a while
 3. Every readable channel is checked across the chosen window
-4. Each matching message is posted to the scam alert channel with the same action buttons as a manual `!scam` report вЂ” nothing is deleted or banned automatically
+4. Each matching message is posted to the scam alert channel with the same action buttons as a manual `!scam` report — nothing is deleted or banned automatically
 5. The notice is edited with a summary and a jump link to the results once the check finishes
 
 **Configuration Checklist:**
-- [ ] `%set scam #channel` вЂ” Configure the scam alert channel (results are posted here)
+- [ ] `%set scam #channel` — Configure the scam alert channel (results are posted here)
 
-Note: Admin only. Gated by a global cooldown shared by every server the bot is in (default 30 days, set by your bot host) вЂ” not a per-server setting.
+Note: Admin only. Gated by a global cooldown shared by every server the bot is in (default 30 days, set by your bot host) — not a per-server setting.
 
 ### Channel Access Overview
 
 **What it does:**
 
-The `%checkchannels` (or `/checkchannels`) command lists every category, channel, and thread ohShield can see вЂ” in the same order they appear in your server's sidebar вЂ” with a permission badge for each.
+The `%checkchannels` (or `/checkchannels`) command lists every category, channel, and thread ohShield can see — in the same order they appear in your server's sidebar — with a permission badge for each.
 
 **How it works:**
 1. Admin runs `%checkchannels`
-2. Each entry shows three вњ…/вќЊ marks: Read History, Send Messages, Manage Messages (in that order)
-3. If ohShield has `Manage Channels`, private channels (hidden from @everyone) are marked рџ”ђ, and channels only Administrators can view are marked рџ”ђрџ”°
-4. A legend at the top explains the marks and reminds you that Send Messages and Manage Messages are required for ohShield's core functionality вЂ” missing either means that channel isn't protected
-5. To fix a missing permission, click the вљ™пёЏ gear icon next to the channel name and select **Permissions**
+2. Each entry shows three ✅/❌ marks: Read History, Send Messages, Manage Messages (in that order)
+3. If ohShield has `Manage Channels`, private channels (hidden from @everyone) are marked 🔐, and channels only Administrators can view are marked 🔐🔰
+4. A legend at the top explains the marks and reminds you that Send Messages and Manage Messages are required for ohShield's core functionality — missing either means that channel isn't protected
+5. To fix a missing permission, click the ⚙️ gear icon next to the channel name and select **Permissions**
 
 ### Role Hierarchy Check
 
 **What it does:**
 
-The `%checkroles` (or `/checkroles`) command shows where ohShield sits in your role hierarchy and what that means for who it can moderate. Discord requires a bot's highest role to be positioned **above** a member's highest role before it can kick, ban, or timeout them вЂ” this holds true even though ohShield doesn't need `Administrator` to moderate.
+The `%checkroles` (or `/checkroles`) command shows where ohShield sits in your role hierarchy and what that means for who it can moderate. Discord requires a bot's highest role to be positioned **above** a member's highest role before it can kick, ban, or timeout them — this holds true even though ohShield doesn't need `Administrator` to moderate.
 
 **How it works:**
 1. Admin runs `%checkroles`
 2. The embed shows ohShield's rank (e.g. "3/12") in the server's role hierarchy
-3. Every role at or above ohShield's own highest role is listed вЂ” members whose highest role is one of these can't be kicked/banned/timed out by the bot
+3. Every role at or above ohShield's own highest role is listed — members whose highest role is one of these can't be kicked/banned/timed out by the bot
 4. A percentage shows how many of your (human) members currently fall into that unmoderatable group, based on each member's highest role
-5. A hint explains that moving ohShield's role higher in **Server Settings в†’ Roles** expands how many members it can act on
+5. A hint explains that moving ohShield's role higher in **Server Settings → Roles** expands how many members it can act on
 
 ### Security Reminder (Notifications)
 
@@ -706,7 +706,7 @@ The `%checkroles` (or `/checkroles`) command shows where ohShield sits in your r
 
 **Configuration:**
 ```
-%setnotify on #announcements       (add a channel вЂ” repeat with a different channel to add more)
+%setnotify on #announcements       (add a channel — repeat with a different channel to add more)
 %setnotify off #announcements      (disable notifications for just that channel)
 %setnotify off                     (disable notifications for every channel)
 %setnotify interval 120            (check every 120 minutes, default)
@@ -714,13 +714,13 @@ The `%checkroles` (or `/checkroles`) command shows where ohShield sits in your r
 ```
 
 **Configuration Checklist:**
-- [ ] `%setnotify on #channel` вЂ” Enable and set the notification channel
-- [ ] (Optional) `%setnotify interval <minutes>` вЂ” Adjust check frequency
-- [ ] (Optional) `%setnotify minmessages <count>` вЂ” Adjust posting threshold
+- [ ] `%setnotify on #channel` — Enable and set the notification channel
+- [ ] (Optional) `%setnotify interval <minutes>` — Adjust check frequency
+- [ ] (Optional) `%setnotify minmessages <count>` — Adjust posting threshold
 
 **Example behavior:**
-- At 12:00 PM вЂ” First reminder sent automatically
-- At 2:00 PM вЂ” Bot checks (interval=120). If 10+ messages since 12:00 PM, sends reminder. Otherwise, waits and rechecks later.
+- At 12:00 PM — First reminder sent automatically
+- At 2:00 PM — Bot checks (interval=120). If 10+ messages since 12:00 PM, sends reminder. Otherwise, waits and rechecks later.
 - The cooldown (global setting) prevents the reminder from appearing too frequently
 
 ### User Verification
@@ -728,14 +728,14 @@ The `%checkroles` (or `/checkroles`) command shows where ohShield sits in your r
 **How it works:**
 1. A verification panel is posted to a designated channel
 2. New members click the Verify button
-3. They complete a challenge for whichever mode(s) you've enabled (emoji, captcha, and/or 2048 game вЂ” more than one can be active at once)
+3. They complete a challenge for whichever mode(s) you've enabled (emoji, captcha, and/or 2048 game — more than one can be active at once)
 4. On success, they're granted the verified role and can see the rest of the server
 5. Optionally, members who fail too many attempts are locked out for a cooldown period, or those who never verify at all can be auto-kicked after a configurable number of hours
 
 **Verification modes:**
-- Emoji вЂ” Select the correct emoji from a grid (configure: number of rounds)
-- CAPTCHA вЂ” Identify distorted text in an image (configure: number of tasks)
-- Game2048 вЂ” Play and win at the 2048 game (configure: target score)
+- Emoji — Select the correct emoji from a grid (configure: number of rounds)
+- CAPTCHA — Identify distorted text in an image (configure: number of tasks)
+- Game2048 — Play and win at the 2048 game (configure: target score)
 
 **Configuration:**
 ```
@@ -769,7 +769,7 @@ Note: The Game2048 mode requires the bot host to have set up a public web server
 - Private channel keeps evidence secure
 - Auto-cleanup prevents your storage channel from getting too large
 
-This feature is set up by whoever hosts the bot via environment variables вЂ” see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
+This feature is set up by whoever hosts the bot via environment variables — see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
 
 ---
 
@@ -781,8 +781,8 @@ This feature is set up by whoever hosts the bot via environment variables вЂ�
 
 **Solution:**
 1. Check bot permissions: Make sure Shield has `Ban Members`, `Manage Messages`, `Manage Guild`
-2. Check bot role position: ohShield's role must be **above** the target user's highest role вЂ” run `%checkroles` to see exactly which roles it can't act on and what percentage of members that affects
-3. In test mode, bans are skipped intentionally вЂ” run `%oh` and check `Test Mode`
+2. Check bot role position: ohShield's role must be **above** the target user's highest role — run `%checkroles` to see exactly which roles it can't act on and what percentage of members that affects
+3. In test mode, bans are skipped intentionally — run `%oh` and check `Test Mode`
 
 ---
 
@@ -792,10 +792,10 @@ This feature is set up by whoever hosts the bot via environment variables вЂ�
 
 **Solution:**
 1. Make sure Shield has `Send Messages` permission in the channel
-2. The prefix is `%` by default вЂ” try `%help` to see if it responds
+2. The prefix is `%` by default — try `%help` to see if it responds
 3. If the bot is in the server but doesn't respond at all, check:
    - Bot role isn't deleted or disabled
-   - Bot has permission to read messages in that channel вЂ” run `%checkchannels` (from a channel it does respond in) to see its access across every channel at a glance
+   - Bot has permission to read messages in that channel — run `%checkchannels` (from a channel it does respond in) to see its access across every channel at a glance
    - No other bot is intercepting the prefix
 4. If none of this helps, ask your bot host to check the server logs (see the [Running Guide](RUNNING_GUIDE.md#troubleshooting))
 
@@ -807,7 +807,7 @@ This feature is set up by whoever hosts the bot via environment variables вЂ�
 
 **Solution:**
 1. Make sure AutoMod is actually enabled:
-   - Go to Server Settings в†’ Safety Center в†’ Auto Moderation
+   - Go to Server Settings → Safety Center → Auto Moderation
    - Create at least one rule
    - Set it to "Send alert message to"
 2. Make sure Shield knows about the AutoMod channel:
@@ -824,9 +824,9 @@ This feature is set up by whoever hosts the bot via environment variables вЂ�
 
 **Solution:**
 1. Check the threshold: Run `%oh` and verify `Image Threshold` is configured
-2. Check excluded roles: The user might have a role that's excluded вЂ” run `%oh` to see the current exclusion list
+2. Check excluded roles: The user might have a role that's excluded — run `%oh` to see the current exclusion list
 3. Check the current settings: run `%oh` and look for the **Image Drop Detection** field (threshold, timeout, excluded roles)
-4. Make sure images are posted as attachments (not links) вЂ” Shield scans Discord attachments only
+4. Make sure images are posted as attachments (not links) — Shield scans Discord attachments only
 5. Text disables the scanner: If there's any text in the message, even a space or emoji, it won't trigger
 
 **Note:** Text must be completely absent. Even `. ` (dot and space) counts as text.
@@ -840,7 +840,7 @@ This feature is set up by whoever hosts the bot via environment variables вЂ�
 **Solution:**
 1. Check mode: Run `%setverify` and verify the mode is set (e.g., `emoji`)
 2. Check the verified role and panel channel are both configured
-3. If mode is `game2048`, this requires the bot host to have set `WEB_PUBLIC_URL` вЂ” ask them to confirm it's configured
+3. If mode is `game2048`, this requires the bot host to have set `WEB_PUBLIC_URL` — ask them to confirm it's configured
 4. Test the verification panel: Try clicking Verify yourself to see error messages
 
 ---
@@ -860,7 +860,7 @@ ohShield stores:
 - **Verification state** (who passed verification, challenge attempts)
 - **IP addresses**, briefly, to enforce the anti-abuse limit on browser-based verification (auto-deleted after the throttle window)
 
-If the bot host has configured **Owner Alerts** (see the [Running Guide](RUNNING_GUIDE.md#environment-variables)), two specific events are also forwarded to the bot operator's own Discord channels, outside your server: a copy of any `!scam` report that results in a ban (including the reported message text), and any Global Rules detection a moderator flags as a false positive. This is used to track detection accuracy across every server running the bot, not just yours вЂ” see [Owner Alerts](README.md#owner-alerts).
+If the bot host has configured **Owner Alerts** (see the [Running Guide](RUNNING_GUIDE.md#environment-variables)), two specific events are also forwarded to the bot operator's own Discord channels, outside your server: a copy of any `!scam` report that results in a ban (including the reported message text), and any Global Rules detection a moderator flags as a false positive. This is used to track detection accuracy across every server running the bot, not just yours — see [Owner Alerts](README.md#owner-alerts).
 
 See the [Privacy Policy](Privacy_Policy.md) for the full breakdown of what's collected and why.
 
@@ -914,7 +914,7 @@ ohShield will warn you if it's missing critical permissions.
 - Logging works normally (enabled)
 - Bans, timeouts, and deletions are skipped (disabled)
 
-Perfect for verifying your configuration before going live. Ask your bot host to enable it вЂ” see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
+Perfect for verifying your configuration before going live. Ask your bot host to enable it — see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
 
 ---
 
@@ -928,9 +928,9 @@ Perfect for verifying your configuration before going live. Ask your bot host to
 
 ## License
 
-ohShield is proprietary software. В© 2026 Evgenii Kepa. All rights reserved.
+ohShield is proprietary software. © 2026 Evgenii Kepa. All rights reserved.
 
-The bot is offered as a hosted service вЂ” you add it to your server rather than running it yourself. The source code is not published, and no licence to copy, modify, distribute, reverse-engineer, or create derivative works is granted. See the [Terms of Service](Terms_of_Service.md) for the full terms.
+The bot is offered as a hosted service — you add it to your server rather than running it yourself. The source code is not published, and no licence to copy, modify, distribute, reverse-engineer, or create derivative works is granted. See the [Terms of Service](Terms_of_Service.md) for the full terms.
 
 ---
 
