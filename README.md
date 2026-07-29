@@ -171,26 +171,6 @@ Optional verification challenges for new members. Enable any combination of:
 
 Each mode requires a verified role that's granted on successful completion. Optionally, log verification outcomes to a channel, lock out members after too many failed attempts, or auto-kick members who never verify.
 
-### Image Storage (Optional)
-
-When enabled, ohShield re-uploads flagged images to a private channel before taking action. This preserves evidence even after the original message is deleted. Set a retention period (default: 24 hours) and images auto-delete after that time. This is configured by whoever hosts the bot — see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
-
-### Telegram Alerts (Optional)
-
-Link one or more Telegram chats (a moderator's PM or a group) to receive the same security alerts posted to your Discord log/scam-alert/AutoMod channels — useful if your moderators check Telegram more often than Discord. Requires the bot host to set `TELEGRAM_BOT_TOKEN` — see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
-
-### Editor Roles
-
-By default, only Administrators can change ohShield's settings. `%seteditorroles` lets an Administrator grant that same access to specific roles, without handing out full Administrator — useful for trusted moderators. Editor-role members can also use the Security Dashboard (below) for any server they can edit.
-
-### Security Dashboard (Optional)
-
-An optional web dashboard for a per-server security overview, activity log, rules status, and more — log in with Discord to see every server you're an Administrator or editor-role holder in. Disabled by default; enabled and configured by whoever hosts the bot — see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
-
-### Test Mode
-
-Run ohShield without executing real moderation actions. Detection, alerts, and logging all work normally — only bans, timeouts, and deletions are skipped. Perfect for testing your configuration before going live. Toggled by whoever hosts the bot — see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
-
 ---
 
 ## Onboarding Wizard
@@ -515,8 +495,6 @@ Available modes (enable any combination):
 
 Use `%setverify off` to disable all modes at once, or `%setverify disable <mode>` to turn off just one.
 
-**Note:** The `game2048` mode requires the bot host to set `WEB_PUBLIC_URL`. See the [Running Guide](RUNNING_GUIDE.md#environment-variables).
-
 ---
 
 ## Commands Reference
@@ -769,8 +747,6 @@ Note: The Game2048 mode requires the bot host to have set up a public web server
 - Private channel keeps evidence secure
 - Auto-cleanup prevents your storage channel from getting too large
 
-This feature is set up by whoever hosts the bot via environment variables — see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
-
 ---
 
 ## Troubleshooting
@@ -797,7 +773,6 @@ This feature is set up by whoever hosts the bot via environment variables — se
    - Bot role isn't deleted or disabled
    - Bot has permission to read messages in that channel — run `%checkchannels` (from a channel it does respond in) to see its access across every channel at a glance
    - No other bot is intercepting the prefix
-4. If none of this helps, ask your bot host to check the server logs (see the [Running Guide](RUNNING_GUIDE.md#troubleshooting))
 
 ---
 
@@ -860,8 +835,6 @@ ohShield stores:
 - **Verification state** (who passed verification, challenge attempts)
 - **IP addresses**, briefly, to enforce the anti-abuse limit on browser-based verification (auto-deleted after the throttle window)
 
-If the bot host has configured **Owner Alerts** (see the [Running Guide](RUNNING_GUIDE.md#environment-variables)), two specific events are also forwarded to the bot operator's own Discord channels, outside your server: a copy of any `!scam` report that results in a ban (including the reported message text), and any Global Rules detection a moderator flags as a false positive. This is used to track detection accuracy across every server running the bot, not just yours — see [Owner Alerts](README.md#owner-alerts).
-
 See the [Privacy Policy](Privacy_Policy.md) for the full breakdown of what's collected and why.
 
 ### What happens if ohShield goes offline?
@@ -913,8 +886,6 @@ ohShield will warn you if it's missing critical permissions.
 - Alerts are posted normally (enabled)
 - Logging works normally (enabled)
 - Bans, timeouts, and deletions are skipped (disabled)
-
-Perfect for verifying your configuration before going live. Ask your bot host to enable it — see the [Running Guide](RUNNING_GUIDE.md#environment-variables).
 
 ---
 
