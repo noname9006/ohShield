@@ -1,7 +1,7 @@
-# Terms of Service — ohShield
+# Terms of Service вЂ” ohShield
 
 **Effective Date:** July 1st, 2026
-**Last Updated:** July 1st, 2026
+**Last Updated:** July 19th, 2026
 
 These Terms of Service ("Terms") govern your access to and use of ohShield (the "Service," "Bot," "we," "us," or "our"), including our Discord bot, verification dashboard, and any related websites or applications. By adding ohShield to a Discord server, accessing our dashboard, or otherwise using the Service, you ("you," "User," or "Server Owner") agree to be bound by these Terms.
 
@@ -11,7 +11,7 @@ If you do not agree to these Terms, do not use the Service.
 
 ## 1. Description of Service
 
-ohShield is a Discord bot and companion dashboard designed to help Discord server administrators verify members and reduce exposure to scams, phishing attempts, fake giveaways, and impersonation within their communities. The Service is provided "as is" and is intended to assist with — but not guarantee — the prevention of malicious activity.
+ohShield is a Discord bot and companion dashboard designed to help Discord server administrators verify members and reduce exposure to scams, phishing attempts, fake giveaways, and impersonation within their communities. The Service is provided "as is" and is intended to assist with вЂ” but not guarantee вЂ” the prevention of malicious activity.
 
 ## 2. Eligibility
 
@@ -45,39 +45,53 @@ ohShield's verification and anti-scam features are designed to reduce risk, not 
 
 We aim to keep ohShield available and reliable, but we do not guarantee uninterrupted or error-free operation. The Service may be temporarily unavailable due to maintenance, Discord API outages, hosting issues, or factors outside our control.
 
-## 7. Intellectual Property
+## 7. Fees and Paid Plans
 
-All trademarks, logos, branding, and original content associated with ohShield are the property of Evgenii Kepa unless otherwise noted. You may not copy, modify, distribute, or create derivative works based on ohShield's branding or codebase without prior written permission, except as permitted by any applicable open-source license.
+- ohShield may be offered with both free and paid tiers. Which features fall under each tier is set out on our website and may change over time.
+- Paid plans are billed in advance on the interval shown at checkout and renew automatically until cancelled. You may cancel at any time; cancellation takes effect at the end of the current billing period.
+- We may introduce, change, or discontinue pricing and plans. Where a change affects an active paid plan, we will give reasonable advance notice and the change will apply from your next billing period, not retroactively.
+- Payments are handled by third-party payment processors. We do not receive or store your full card details. Your use of a payment method is also subject to that processor's terms.
+- Fees are exclusive of taxes unless stated otherwise. You are responsible for any applicable taxes or currency conversion charges.
+- Except where required by law, fees already paid are non-refundable. Statutory rights that apply to you as a consumer are not affected by this clause.
+- Non-payment may result in suspension or downgrade of paid features. Free-tier functionality and your server's own data are not deleted solely because a paid plan lapses.
 
-## 8. Third-Party Services
+## 8. Intellectual Property
+
+ohShield is proprietary software. All source code, trademarks, logos, branding, detection rules, documentation, and original content associated with ohShield are the exclusive property of Evgenii Kepa unless otherwise noted, and are protected by copyright and other applicable laws.
+
+The Service is licensed for use, not sold. Subject to these Terms, you are granted a limited, non-exclusive, non-transferable, revocable right to use ohShield as a hosted service within Discord servers you control. No other rights are granted, expressly or by implication.
+
+You may not copy, modify, distribute, sell, sublicense, rent, publish, reverse-engineer, decompile, or create derivative works based on ohShield's code, detection rules, or branding without prior written permission. **All rights not expressly granted are reserved.**
+
+## 9. Third-Party Services
 
 ohShield operates using the Discord API and may rely on third-party infrastructure providers (e.g., hosting, database, or analytics services). Your use of ohShield is also subject to the terms and privacy policies of Discord Inc. and any such third parties. We are not responsible for the practices or availability of third-party services.
 
-## 9. Disclaimer of Warranties
+## 10. Disclaimer of Warranties
 
 THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, OR COMPLETELY SECURE.
 
-## 10. Limitation of Liability
+## 11. Limitation of Liability
 
 TO THE MAXIMUM EXTENT PERMITTED BY LAW, EVGENII KEPA SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF DATA, REVENUE, OR GOODWILL, ARISING FROM YOUR USE OF OR INABILITY TO USE THE SERVICE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR TOTAL LIABILITY FOR ANY CLAIM ARISING FROM THESE TERMS OR THE SERVICE SHALL NOT EXCEED $100 USD.
 
-## 11. Indemnification
+## 12. Indemnification
 
 You agree to indemnify and hold harmless Evgenii Kepa and its affiliates, officers, and contributors from any claims, damages, liabilities, or expenses (including reasonable legal fees) arising from your use of the Service or violation of these Terms.
 
-## 12. Termination
+## 13. Termination
 
 We may suspend or terminate your access to ohShield at any time, with or without notice, for conduct that we believe violates these Terms or is otherwise harmful to other users, us, or third parties. You may stop using the Service at any time by removing the Bot from your server.
 
-## 13. Changes to These Terms
+## 14. Changes to These Terms
 
 We may update these Terms from time to time. Material changes will be reflected by an updated "Last Updated" date above. Continued use of the Service after changes take effect constitutes acceptance of the revised Terms.
 
-## 14. Governing Law
+## 15. Governing Law
 
 These Terms shall be governed by and construed in accordance with the laws of Georgia, without regard to its conflict of law provisions.
 
-## 15. Contact Us
+## 16. Contact Us
 
 If you have questions about these Terms, please contact us at:
 
