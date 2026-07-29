@@ -1,4 +1,4 @@
-# Terms of Service вЂ” ohShield
+# Terms of Service — ohShield
 
 **Effective Date:** July 1st, 2026
 **Last Updated:** July 19th, 2026
@@ -11,7 +11,7 @@ If you do not agree to these Terms, do not use the Service.
 
 ## 1. Description of Service
 
-ohShield is a Discord bot and companion dashboard designed to help Discord server administrators verify members and reduce exposure to scams, phishing attempts, fake giveaways, and impersonation within their communities. The Service is provided "as is" and is intended to assist with вЂ” but not guarantee вЂ” the prevention of malicious activity.
+ohShield is a Discord bot and companion dashboard designed to help Discord server administrators verify members and reduce exposure to scams, phishing attempts, fake giveaways, and impersonation within their communities. The Service is provided "as is" and is intended to assist with — but not guarantee — the prevention of malicious activity.
 
 ## 2. Eligibility
 
