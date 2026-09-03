@@ -97,9 +97,10 @@ Re-run it any time with `%start`/`/start` (Administrator only) to revisit or cha
 Always-on cross-server threat detection for:
 
 1. Username impersonation — Detects suspicious display names attempting to impersonate staff or well-known users
-2. Scam links — Identifies known phishing URLs and scam domains
-3. Fake job postings — Detects recruitment spam patterns (3+ fake roles in one message)
-4. Mention abuse — Catches unauthorized @everyone/@here mentions from users without permission
+2. Obfuscated links — Identifies known phishing URLs, scam domains, and link shapes built to evade normal link filters
+3. Fraudulent opportunity — Matches the phrasing of fake giveaways, airdrops, "support" DMs, and similar bait
+4. Recruitment scam — Detects fake job postings (3+ fake roles in one message)
+5. Mention abuse — Catches unauthorized @everyone/@here mentions from users without permission
 
 When triggered: Message is deleted, user is timed out, and alert is logged. Enable per-server with customizable timeout duration.
 

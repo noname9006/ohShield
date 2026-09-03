@@ -60,8 +60,8 @@ You don't write scam filters. Discord's native AutoMod and most security bots ha
 regex box and wish you luck — which makes every admin independently responsible for
 discovering and maintaining patterns while scammers rotate theirs weekly.
 
-Global Rules are on by default and cover homoglyph impersonation, obfuscated links,
-recruitment spam, and mention abuse. New patterns arrive live, with no restart and
+Global Rules are on by default and cover five categories: homoglyph impersonation,
+obfuscated links, fraudulent-opportunity bait, recruitment spam, and mention abuse. New patterns arrive live, with no restart and
 nothing for you to update.
 
 ### A network, not a bot
@@ -94,7 +94,7 @@ Discord OAuth login, per-server overview, logs, and settings.
 ## Features
 
 - **Guided onboarding wizard** — runs automatically on join; permission and role-hierarchy checks with one-click fixes, re-runnable any time with `%start`
-- **Global Rules** — always-on cross-server detection for username impersonation, obfuscated scam links, fake job postings, and mention abuse
+- **Global Rules** — always-on cross-server detection across five categories: username impersonation, obfuscated scam links, fraudulent-opportunity bait, recruitment scams, and mention abuse; each category's penalty (timeout/kick/ban) is configurable, and a server can switch any of them to alert-only
 - **Domain feed** — synced blocklist of known Discord/Steam phishing domains layered under Global Rules, with per-server suppression instead of deletion
 - **Community scam reporting** — `!scam` on any message, with per-guild and per-user cooldowns, hourly caps, and immune roles
 - **Report action roles** — grant delete/timeout/kick/ban *through reports only*, without the server-wide Discord permission
